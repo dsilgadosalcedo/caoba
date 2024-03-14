@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'mona-sans';
+  src: url('/fonts/MonaSans-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'mona-sans';
+  src: url('./fonts/MonaSans-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'mona-sans', Geneva, Tahoma, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 50px 0;
+}
+
+.caoba-logo {
+  height: 4rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 4rem;
+  list-style: none;
+  font-size: small;
+}
+
+.description_section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 50px;
+  gap:8px
+}
+
+.description_section h1 {
+  font-family: 'mona-sans', Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  font-size: 8rem;
+}
+
+.description_section img {
+  width: 100%;
+}
+
+.stamp {
+  padding: 20px;
+  transform: rotate(-349deg);
+  background-color: #ff884b;
+  font-size: 20px;
+  width: fit-content;
+  border-radius: 4px;
+}
