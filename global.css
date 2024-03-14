@@ -1,19 +1,21 @@
 @font-face {
   font-family: 'mona-sans';
-  src: url('/fonts/MonaSans-SemiBold.woff2') format('woff2');
+  src: url('./https://github.com/dsilgadosalcedo/caoba-project/raw/main/public/fonts/MonaSans-SemiBold.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'mona-sans';
-  src: url('/fonts/MonaSans-Regular.woff2') format('woff2');
+  src: url('./fonts/MonaSans-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -21,51 +23,152 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'mona-sans', Geneva, Tahoma, sans-serif;
+  font-family: "Inter", sans-serif;
+  /* font-family: 'mona-sans', Geneva, Tahoma, sans-serif; */
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 50px 0;
+  padding: 15px 25px 0;
+}
+
+main {
+  margin-top: 1.8rem;
 }
 
 .caoba-logo {
   height: 4rem;
 }
 
+nav {
+  display: none;
+}
+
 nav ul {
   display: flex;
-  gap: 4rem;
+  align-items: center;
+  gap: 4.2rem;
   list-style: none;
-  font-size: small;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-weight: lighter;
+  color: #ffffff;
+  padding: 1.2rem 2rem;
+  background-color: #222;
+  border-radius: 99999px;
 }
 
 .description_section {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 0 50px;
-  gap:8px
+  padding: 0 20px;
+  gap: 2.4rem;
+}
+
+.description_section__left {
+  display: flex;
+  justify-content: center;
+  height: 90dvh;
+  flex-direction: column;
+  gap: 4rem;
+  position: relative;
+}
+
+.stamp {
+  background-color: #ff884b;
+  border-radius: 0.4rem;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 20px;
+  font-size: 1.8rem;
+  position: absolute;
+  transform: rotate(-349deg);
+  width: fit-content;
+  right: 0;
+  top: 6rem;
 }
 
 .description_section h1 {
-  font-family: 'mona-sans', Geneva, Tahoma, sans-serif;
   font-weight: 600;
-  font-size: 8rem;
+  font-size: 5rem;
+}
+
+.description_section p {
+  font-weight: 500;
+  font-size: 2rem;
+  /* text-wrap: balance; */
 }
 
 .description_section img {
   width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
 }
 
-.stamp {
-  padding: 20px;
-  transform: rotate(-349deg);
-  background-color: #ff884b;
-  font-size: 20px;
-  width: fit-content;
-  border-radius: 4px;
+.second-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.background {
+  width: 10rem;
+  height: 10rem;
+  background-color: #191919;
+  
+}
+
+@media (min-width: 768px) {
+  nav {
+    display: block;
+  }
+
+  header {
+    padding: 40px 50px 0;
+  }
+
+  .description_section {
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding: 0 50px;
+  }
+
+  .stamp {
+    right: 2rem;
+    top: 5.2rem;
+  }
+
+  .description_section p {
+    width: 46rem;
+  }
+
+  .description_section__left {
+    height: auto;
+  }
+
+  .description_section h1 {
+    font-size: 7.6rem;
+  }
+
+  
+  .description_section img {
+    height: 55rem;
+    aspect-ratio: inherit;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Styles for larger tablet screens go here */
 }
