@@ -1,0 +1,211 @@
+@font-face {
+  font-family: 'mona-sans';
+  src: url('./https://github.com/dsilgadosalcedo/caoba-project/raw/main/public/fonts/MonaSans-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'mona-sans';
+  src: url('./fonts/MonaSans-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #222222;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.5rem 2.5rem 0;
+
+  .caoba-logo {
+    height: 4rem;
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 4.2rem;
+      list-style: none;
+      font-size: 1.4rem;
+      font-weight: 600;
+
+      li {
+        display: none;
+      }
+
+      .nav-button {
+        display: flex;
+        height: 4rem;
+        align-items: center;
+        text-align: center;
+        font-weight: lighter;
+        color: #ffffff;
+        padding-inline: 2rem;
+        background-color: #222;
+        border-radius: 99999px;
+      }
+    }
+  }
+}
+
+main {
+  margin-top: 1.8rem;
+}
+
+.description_section {
+  display: grid;
+  gap: 2.4rem;
+  margin: 1.5rem 2.5rem 0;
+
+  &__left {
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+    flex-direction: column;
+    gap: 4rem;
+    position: relative;
+
+    .stamp {
+      background-color: #ff9967;
+      font-size: 1.6rem;
+      font-weight: 600;
+      padding: 1.2rem;
+      position: absolute;
+      transform: rotate(-349deg);
+      width: fit-content;
+      right: 0;
+      top: 5.4rem;
+    }
+
+    h1 {
+      font-weight: 600;
+      font-size: 5rem;
+    }
+
+    p {
+      text-align: center;
+      font-weight: 500;
+      font-size: 2rem;
+      // text-wrap: balance;
+    }
+
+    .partners {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.8rem;
+
+      p {
+        font-size: 1.6rem;
+        font-weight: 400;
+      }
+    }
+
+    .memojies {
+      height: 3.4rem;
+      object-fit: contain;
+    }
+  }
+
+  .hero-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+}
+
+.second-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  .background {
+    border-radius: 99999rem;
+    width: 55rem;
+    height: 34.6rem;
+    background-color: #191919;
+  }
+}
+
+@media (min-width: 768px) {
+  header {
+    margin: 4rem 5rem 0;
+
+    .menu-icon {
+      display: none;
+    }
+
+    .caoba-logo {
+      display:block
+    }
+
+    nav {
+      ul {
+        li {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .description_section {
+    margin-inline: 5rem;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 0;
+
+    &__left {
+      height: auto;
+      justify-content: end;
+      padding-bottom: 4rem;
+
+      .stamp {
+        font-weight: bold;
+        font-size: 2rem;
+        padding: 1.8rem 2.2rem;
+        top: 8.2rem;
+      }
+
+      h1 {
+        font-weight: 600;
+        font-size: 7rem;
+      }
+
+      p {
+        text-align: start;
+        width: 40rem;
+      }
+
+      .partners {
+        flex-direction: row;
+      }
+    }
+
+    .hero-image {
+      height: 60rem;
+      aspect-ratio: inherit;
+    }
+  }
+}
