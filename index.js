@@ -13,5 +13,5 @@ gsap.to(background, {
   width: '100vw',
   height: '100vh',
   borderRadius: 0,
-  ease: 'slow',
+  ease: 'power3.in',
 });
