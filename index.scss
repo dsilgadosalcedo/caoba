@@ -1,14 +1,21 @@
 @font-face {
-  font-family: 'mona-sans';
-  src: url('./https://github.com/dsilgadosalcedo/caoba-project/raw/main/public/fonts/MonaSans-SemiBold.woff2') format('woff2');
+  font-family: 'MonaSans';
+  src: url('./fonts/MonaSans-SemiBold.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'mona-sans';
+  font-family: 'MonaSans';
   src: url('./fonts/MonaSans-Regular.woff2') format('woff2');
-  font-weight: normal;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MonaSans';
+  src: url('./fonts/MonaSans-Light.woff2') format('woff2');
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -23,7 +30,8 @@ html {
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "MonaSans", sans-serif;
+  font-weight: 400;
   color: #222222;
 }
 
@@ -60,7 +68,7 @@ header {
         height: 4rem;
         align-items: center;
         text-align: center;
-        font-weight: lighter;
+        font-weight: 300;
         color: #ffffff;
         padding-inline: 2rem;
         background-color: #222;
@@ -119,7 +127,6 @@ main {
 
       p {
         font-size: 1.6rem;
-        font-weight: 400;
       }
     }
 
@@ -193,7 +200,7 @@ main {
 
   .description_section {
     margin-inline: 5rem;
-    grid-template-columns: 1fr 1.1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 0;
 
     &__left {
@@ -202,7 +209,7 @@ main {
       padding-bottom: 4rem;
 
       .stamp {
-        font-weight: bold;
+        font-weight: 700;
         font-size: 2rem;
         padding: 1.8rem 2.2rem;
         top: 8.2rem;
