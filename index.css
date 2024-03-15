@@ -29,7 +29,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 1.5rem 2.5rem 0;
+  margin: 1rem 2.5rem 0;
 }
 header .caoba-logo {
   height: 4rem;
@@ -71,6 +71,7 @@ main {
   display: grid;
   gap: 2.4rem;
   margin: 1.5rem 2.5rem 0;
+  background-color: #ffffff;
 }
 .description_section__left {
   display: flex;
@@ -120,22 +121,39 @@ main {
   object-fit: cover;
 }
 
-.second-section {
+.dark-section {
+  position: relative;
+  color: #fff;
+}
+.dark-section .background-container {
+  height: 100vh;
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  z-index: -1;
 }
-.second-section .background {
-  border-radius: 99999rem;
-  width: 55rem;
-  height: 34.6rem;
-  background-color: #191919;
+.dark-section .background-container .background {
+  background-color: #222;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 30rem;
+}
+.dark-section .content {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  margin-inline: 2.5rem;
+}
+.dark-section .content h1 {
+  font-weight: 600;
+  font-size: 5rem;
 }
 
 @media (min-width: 768px) {
   header {
-    margin: 4rem 5rem 0;
+    margin: 2.5rem 5rem 0;
   }
   header .menu-icon {
     display: none;
@@ -176,6 +194,13 @@ main {
   .description_section .hero-image {
     height: 60rem;
     aspect-ratio: inherit;
+  }
+  .dark-section .background-container .background {
+    width: 55rem;
+    height: 34.6rem;
+  }
+  .dark-section .content {
+    margin-inline: 5rem;
   }
 }
 
